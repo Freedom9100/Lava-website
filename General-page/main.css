@@ -1,0 +1,640 @@
+/* Добавляем шрифт */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+/* Общие настройки */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    outline: none;
+    border-radius: 5px;
+    color: var(--clr-main);
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-weight: 600;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .25);
+    text-decoration: none;
+}
+
+.btn:active {
+    box-shadow: none
+}
+
+.green-btn {
+    border-radius: 5px;
+    background: linear-gradient(90deg, #30A166 0%, #8ECEA7 50.27%, #30A166 101.61%);
+}
+
+.green-btn:hover {
+    background: #4BC586;
+}
+
+:root {
+    --clr-bg: #1C1B25;
+    --clr-main: #fff;
+    --clr-logo: #1F8A52;
+    --clr-login: #4BC586;
+}
+
+/* Верхушка */
+
+header {
+
+    @keyframes up-btn {
+        to {
+            display: none;
+        }
+    }
+}
+
+.form-box {
+    width: 100%;
+    background-color: var(--clr-bg);
+}
+
+.form-box .logo-header {
+    margin: 0 192px 0 72px;
+}
+
+.form-box .page-1 {
+    display: flex;
+    justify-content: center;
+    color: var(--clr-main);
+    align-items: center;
+    border-bottom: 2px solid #262D35;
+    padding: 20px 0;
+}
+
+
+.form-box .page-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-main);
+    width: 100%;   
+    height: 61px; 
+    flex-wrap: wrap;
+    gap: 100px;
+    border-bottom: 2px solid #262D35;
+    display: none;
+    transform: translateY(-100px);
+}
+
+.form-box.active .page-2 {
+    transform: translateY(0);
+    display: flex;
+}
+
+.form-box .page-2 a {
+    text-decoration: none;
+    color: var(--clr-main);
+    transition: .7s;
+}
+
+.form-box .page-2 a:hover {
+    text-decoration: underline;
+}
+
+.form-box .nav-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.form-box .login-btn {
+    background: linear-gradient(0.25turn, #262D35, #3D4651, #262D35);
+    width: 200px;
+    height: 45px;
+    margin: 0 80px 0 154px;
+    padding: 11px 69px 13px;
+    text-decoration: none;
+}
+
+.form-box .login-btn:hover {
+    background: #262D35;
+}
+
+.under-box {
+    display: flex;
+    width: 100%;
+    height: 595px;
+    background-color: var(--clr-bg);
+    border-bottom: 1px solid #137A44;
+}
+
+.under-box .img-box {
+    position: absolute;
+    width: 729px;
+    height: 594px;
+    margin: 0 0 0 52%;
+    background: url(./img-main/header-photo.png), lightgray 0px -416.51px / 100% 184.744% no-repeat;
+}
+
+.under-box .img-box::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background: linear-gradient(91deg, #1C1B25 3.86%, rgba(31, 32, 42, 0.90) 21.34%, rgba(32, 34, 44, 0.72) 38.83%, rgba(44, 52, 62, 0.00) 99.5%);
+}
+
+.under-box .side-box {
+    display: flex;
+    flex-direction: column;
+    margin: 126px 619px 179px 81px;
+    z-index: 1;
+}
+
+.under-box .side-box .header-text {
+    width: 740px;
+    height: 160px;
+    color: #E4E8ED;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.40);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    margin: 0 0 75px 0;
+    span {
+        color: #4BC586;
+    }
+}
+
+.under-box .side-box .green-btn {
+    width: 280px;
+    height: 55px;
+    padding: 14px 49px 13px 48px;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 21px;
+}
+
+.up-btn {
+    position: fixed;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #4BC586;
+    margin: 529px 0 0 1405px;
+    padding: 8px 18px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}
+
+
+/* Предложения банка */
+
+main .wrapper {
+    display: flex;
+    height: 825px;
+    background-color: var(--clr-bg);
+    flex-direction: column;
+}
+
+.text-box {
+    display: flex;
+}
+
+.title {
+    width: 434px;
+    height: 47px;
+    color: #E4E8ED;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2px;
+    margin: 113px 0 0 70px;
+    z-index: 1;
+}
+
+.rectangle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 0px 0px 5px 0px;
+    border-right: 2px solid #4BC586;
+    border-bottom: 2px solid #4BC586;
+    margin: 110px 917px 655px 463px;
+}
+
+main .wrapper .pannel-box {
+    display: flex;
+    width: 1300px;
+    height: 460px;
+    margin: 0 70px 0 100px;
+}
+
+main .wrapper .pannel-box .pannel {
+    width: 325px;
+    height: 460px;
+    padding: 32px 38px 251px 37px;
+    background-color: transparent;
+    margin: 95px 0;
+    transition: .7s;
+}
+
+main .wrapper .pannel-box .pannel:hover {
+    border-radius: 5px;
+    background: #262D35;
+}
+
+main .wrapper .pannel-box .pannel .img-box {
+    height: 175px;
+}
+
+main .wrapper .pannel-box .pannel .main-img {
+    flex-wrap: wrap;
+    gap: 75px;
+}
+
+main .wrapper .pannel-box .pannel .main-img #first {
+    width: 250px;
+    height: 160px;
+    background: url(./img-main/pannel-img-1.png), 0px -51.437px / 100% 160.305% no-repeat;
+}
+
+main .wrapper .pannel-box .pannel .main-img #second {
+    width: 250px;
+    height: 160px;
+    background: url(./img-main/pannel-img-2.png), 0px -51.437px / 100% 160.305% no-repeat;
+}
+
+main .wrapper .pannel-box .pannel .main-img #third {
+    width: 250px;
+    height: 175px;
+    background: url(./img-main/pannel-img-3.png), 0px -51.437px / 100% 160.305% no-repeat;
+}
+
+main .wrapper .pannel-box .pannel .main-img #fourth {
+    width: 250px;
+    height: 167px;
+    background: url(./img-main/pannel-img-4.png), 0px -51.437px / 100% 160.305% no-repeat;
+}
+
+main .wrapper .pannel-box .pannel .main-text {
+    width: 270px;
+    height: 128px;
+    border-top: 1px solid #4BC586;
+    padding: 20px 49px 21px 0;
+    margin-bottom: 24px;
+}
+
+main .wrapper .pannel-box .pannel .main-text p {
+    width: 221px;
+    height: 86.414px;
+    color: #E4E8ED;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; 
+}
+
+main .wrapper .pannel-box .pannel .main-text p span {
+    color: #8ECEA7;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+main .wrapper .pannel-box .pannel .green-btn {
+    width: 270px;
+    height: 50px;
+    padding: 11px 75px 10px 76px;
+}
+
+/* Наши преимущества */
+
+main .container {
+    height: 645px;
+    background-color: #262D35;
+    box-shadow: 0 10px 2px rgba(0, 0, 0, .035) inset;
+}
+
+main .container .text-box p {
+    width: 445px;
+}
+
+main .container .text-box span {
+    margin: 110px 904px 0 476px;
+}
+
+main .container .slide-form {
+    display: flex;
+}
+
+main .container .slider-container {
+    display: flex;
+    width: 1100px;
+    height: 280px;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 95px 170px 0 200px;
+}
+
+main .container .slider-container .slide-box {
+    width: 260px;
+    height: 280px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #1C1B25 9.29%, rgba(28, 27, 37, 0.70) 47.56%, #1C1B25 100%);
+}
+
+main .container .slider-container .slide-box img {
+    margin: 40px 75px 35px 75px;
+}
+
+main .container .slider-container .slide-box .slide-text {
+    width: 218px;
+    height: 48px;
+    color: #E4E8ED;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 21px 47px 21px;
+}
+
+main .container a {
+    position: absolute;
+}
+
+
+main .container .perv-slide {
+    background: url(./img-main/slide-left.svg);
+    width: 36px;
+    height: 41px;
+    margin: 222px 0 0 70px;
+}
+
+main .container .next-slide {
+    background: url(./img-main/slide-right.svg);
+    width: 36px;
+    height: 41px;
+    margin: 222px 70px 0 1390px;
+}
+
+/* Наша команда */
+
+.main-box .text-box span {
+    margin: 110px 1044px 0 336px;
+}
+
+.main-box {
+    height: 740px;
+    background-color: var(--clr-bg);
+}
+
+.main-box .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 95px 70px 0 100px;
+}
+
+.main-box .team-container .team-box {
+    width: 312px;
+    height: 376.5px;
+}
+
+.main-box .team-container .team-box .photo {
+    width: 310px;
+    height: 275px;
+    background-color: #262D35;
+    padding: 25px 30px;
+    border-radius: 5px 5px;
+}
+
+.main-box .team-container .team-box .under-text {
+    width: 310px;
+    height: 100px;
+    background: linear-gradient(90deg, #30A166 0%, #54BF88 49.48%, #30A166 98.44%);
+    padding: 25px 0 0 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+.main-box .team-container .team-box .under-text:hover {
+    background: #30A166;
+}
+
+.main-box .team-container .team-box .under-text .name {
+    width: 186px;
+    height: 23px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin: 0 53px;
+}
+
+.main-box .team-container .team-box .under-text .stage {
+    width: 243px;
+    height: 23px;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin: 0 23px;
+}
+
+/* О банке */
+
+.last-box {
+    height: 628px;
+    background-color: #262D35;
+}
+
+.last-box .text-box span {
+    margin: 110px 1183px 0 197px;
+}
+
+.last-box .last-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 146px;
+}
+
+.last-box .last-container .text-box {
+    width: 570px;
+    height: 192px;
+    margin: 95px 0 0 54px;
+}
+
+.last-box .last-container .text-box p {
+    color: #E4E8ED;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+}
+
+.last-box .last-container .subscribe-page {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 310px;
+    background-color: #1C1B25;
+    margin: 47px 70px 0 0;
+}
+
+.last-box .last-container .subscribe-page p {
+    width: 450px;
+    height: 26px;
+    color: #8ECEA7;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 1.3px;
+    margin: 34px 61px 30px 89px;
+}
+
+.last-box .last-container .subscribe-page .username {
+    margin: 0 0 25px 73px;
+}
+
+.last-box .last-container .subscribe-page .username input {
+    width: 333px;
+    height: 45px;
+    border: 1px solid #262D35;
+    border-radius: 5px;
+    background: #262D35;
+    color: #E4E8ED;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1px;
+    padding: 0 7px;
+}
+
+.last-box .last-container .subscribe-page .username label {
+    width: 106px;
+    height: 26px;
+    color: #E4E8ED;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
+.last-box .last-container .subscribe-page .email {
+    margin: 0 0 37px 61px;
+}
+
+.last-box .last-container .subscribe-page .email input {
+    width: 333px;
+    height: 45px;
+    border: none;
+    border: 1px solid #262D35;
+    border-radius: 5px;
+    background: #262D35;
+    color: #E4E8ED;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1px;
+    padding: 0 7px;
+}
+
+.last-box .last-container .subscribe-page .email label {
+    width: 119px;
+    height: 26px;
+    color: #E4E8ED;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+
+.last-box .last-container .subscribe-page .input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px;
+    align-items: center;
+}
+
+.last-box .last-container .subscribe-page .input input:valid {
+    border: 1px solid var(--clr-login);
+}
+
+.last-box .last-container .subscribe-page a {
+    width: 200px;
+    height: 45px;
+    padding: 11px 32px;
+    margin: 0 0 0 339px;
+}
+
+.input input:invalid {
+    border-color: rgba(225, 12, 12, 0.511) !important; 
+}
+
+/* Нижняя часть */
+
+footer {
+    height: 248px;
+    background-color: var(--clr-bg);
+}
+
+.bottom {
+    display: flex;
+    padding: 70px 0;
+}
+
+.bottom .nav-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 260px;
+}
+
+.bottom .nav-bottom .main-row {
+    display: flex;
+    color: var(--clr-main);
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 70px 0;
+}
+
+.bottom .nav-bottom .main-row a {
+    text-decoration: none;
+    color: var(--clr-main);
+}
+
+.bottom .nav-bottom .main-row a:hover {
+    text-decoration: underline;
+}
+
+.bottom .nav-bottom .side-column {
+    display: flex;
+    flex-direction: column;
+    color: var(--clr-main);
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: end;
+    margin: 70px 0;
+}
+
+.bottom .logo-bottom {
+    margin: 70px 283px 108px 70px;
+}

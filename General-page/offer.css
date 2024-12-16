@@ -1,0 +1,290 @@
+/* Добавляем шрифт */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+/* Общие настройки */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+    outline: none;
+    border-radius: 5px;
+    color: var(--clr-main);
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-weight: 600;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .25);
+    text-decoration: none;
+}
+
+.btn:active {
+    box-shadow: none
+}
+
+.login-btn {
+    background: linear-gradient(0.25turn, #262D35, #3D4651, #262D35);
+}
+
+.login-btn:hover {
+    background: #262D35;
+}
+
+.green-btn {
+    border-radius: 5px;
+    background: linear-gradient(90deg, #30A166 0%, #8ECEA7 50.27%, #30A166 101.61%);
+}
+
+.green-btn:hover {
+    background: #4BC586;
+}
+
+:root {
+    --clr-bg: #1C1B25;
+    --clr-main: #fff;
+    --clr-logo: #1F8A52;
+    --clr-login: #4BC586;
+}
+/* Верхушка */
+
+.form-box {
+    width: 100%;
+    background-color: var(--clr-bg);
+}
+
+.form-box .logo-header {
+    margin: 0 192px 0 72px;
+}
+
+.form-box .page-1 {
+    display: flex;
+    justify-content: center;
+    color: var(--clr-main);
+    align-items: center;
+    border-bottom: 2px solid #262D35;
+    padding: 20px 0;
+}
+
+
+.form-box .page-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-main);
+    width: 100%;   
+    height: 61px; 
+    flex-wrap: wrap;
+    gap: 100px;
+    border-bottom: 2px solid #262D35;
+    display: none;
+    transform: translateY(-100px);
+}
+
+.form-box.active .page-2 {
+    transform: translateY(0);
+    display: flex;
+}
+
+.form-box .page-2 a {
+    text-decoration: none;
+    color: var(--clr-main);
+}
+
+.form-box .page-2 a:hover {
+    text-decoration: underline;
+}
+
+.form-box .nav-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+
+
+.form-box .login-btn {
+    background: linear-gradient(0.25turn, #262D35, #3D4651, #262D35);
+    width: 200px;
+    height: 45px;
+    margin: 0 80px 0 154px;
+    padding: 11px 69px 13px;
+}
+
+.form-box .login-btn:hover {
+    background: #262D35;
+}
+
+/* Главная часть */
+
+main {
+    height: 706px;
+    background: #1C1B25;
+    overflow: hidden;
+}
+
+main .container {
+    display: flex;
+    width: 1141px;
+    height: 391px;
+}
+
+main .container .side {
+    width: 631px;
+    height: 286px;
+    margin: 105px 80px;
+
+}
+
+main .container .side .text-box {
+    color: #E4E8ED;
+}
+
+main .container .side .text-box h2 {
+    width: 631px;
+    height: 100px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 25px;
+}
+
+main .container .side .text-box p {
+    width: 588px;
+    height: 56px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 65px;
+}
+
+main .container .img-box img {
+    width: 400px;
+    height: 252px;
+    margin: 123px 219px 0 110px;
+}
+
+main .container .btn-box .green-btn {
+    width: 200px;
+    height: 40px;
+    padding: 9px 48px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    margin-right: 25px;
+}
+
+main .container .btn-box .login-btn {
+    width: 170px;
+    height: 40px;
+    padding: 9px 53px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.2px;
+}
+
+main .under-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 111px;
+    width: 100%;
+    padding: 80px 105px;
+}
+
+main .under-container .under-text {
+    width: 253.101px;
+    height: 83px;
+}
+
+main .under-container .under-text h2 {
+    color: #8ECEA7;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+
+#first {
+    width: 253px;
+}
+
+#second {
+    width: 265px;
+}
+
+#third {
+    width: 219px;
+}
+
+#fourth {
+    width: 207px;
+}
+
+main .under-container .under-text p {
+    color: #E4E8ED;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Нижняя часть */
+
+footer {
+    height: 248px;
+    background-color: var(--clr-bg);
+}
+
+.bottom {
+    display: flex;
+    padding: 70px 0;
+}
+
+.bottom .nav-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 260px;
+}
+
+.bottom .nav-bottom .main-row {
+    display: flex;
+    color: var(--clr-main);
+    flex-wrap: wrap;
+    gap: 100px;
+    margin: 70px 0;
+}
+
+.bottom .nav-bottom .main-row a {
+    text-decoration: none;
+    color: var(--clr-main);
+}
+
+.bottom .nav-bottom .main-row a:hover {
+    text-decoration: underline;
+}
+
+.bottom .nav-bottom .side-column {
+    display: flex;
+    flex-direction: column;
+    color: var(--clr-main);
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: end;
+    margin: 70px 0;
+}
+
+.bottom .logo-bottom {
+    margin: 70px 283px 108px 70px;
+}
